@@ -28,14 +28,19 @@ Included in the set as well are aliases to point to cardinal directions. They wo
 
 ## Use in node-red dashboards
 
-Create a new static directory within your `.node-red` directory from which you can serve the CSS and Font files, and enter the full path in your node-red settings.js file in the httpStatic section, for example `httpStatic: '/home/pi/.node-red/public',`
-
+Create a new static directory within your `.node-red` directory from which you can serve the CSS and Font files, for example 'public'.  
 Git clone this repo into your newly created static directory;
 
     cd && cd .node-red/public
     git clone https://github.com/Paul-Reed/weather-icons.git
 
-..and stop and restart node-red
+Edit your node-red settings file, usually `nano /home/pi/.node-red/settings.js` as follows;
+
+Firstly, edit httpStatic to read your static folder  
+`httpStatic: '/home/pi/.node-red/public',`
+and also if you havent already done so, httpAdminRoot must also be used to make the editor UI available at a path other than /. So for example if you changed the setting to `httpAdminRoot: '/admin',` then instead of your editor being accessed at the URL `192.168.168.13:1880/` you would use `192.168.168.13:1880/admin`
+
+Then stop and restart node-red
 
 An example of using the icons in a node-red ui 'template node', would be;
 
