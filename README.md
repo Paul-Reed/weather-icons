@@ -48,6 +48,8 @@ The class shown will retreive the icon as called in the msg payload, display it 
 
 The `<div>` will centre the icon in the dashboard panel.
 
+There is an [example node-red flow](/example/example.txt) to get you started, once you have completed the above.
+
 ## Contributing
 If you feel so inclined to add icon ideas, icon art, or other fixes/changes to how the package works, feel free to help!
 
