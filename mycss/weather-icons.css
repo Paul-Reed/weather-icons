@@ -1803,6 +1803,9 @@
 .wi-wu-flurries:before {
   content: "\f064";
 }
+.wi-wu-fog:before {
+  content: "\f014";
+}
 .wi-wu-hazy:before {
   content: "\f0b6";
 }
