@@ -55,6 +55,25 @@ The `<div>` will centre the icon in the dashboard panel.
 
 There is an [example node-red flow](/example/example.txt) to get you started, once you have completed the above.
 
+## Add entries to app.cache
+
+If you have password protected your dashboard by enabling `httpNodeAuth`, then unless the weather-icons css & font files are added to the node-red dashboard app.cache, you will get repeated requests to re-authorise, due to them being again requested from the server, instead of being cached by the browser.
+
+To add the files to the dashboard app.cache;  
+`nano /home/pi/.node-red/node_modules/node-red-dashboard/dist/dashboard.appcache`  
+and add the following entries to the the file;  
+```
+../../../weather-icons/mycss/weather-icons.min.css
+../../../weather-icons/myfonts/weathericons-regular-webfont.eot
+../../../weather-icons/myfonts/weathericons-regular-webfont.svg
+../../../weather-icons/myfonts/weathericons-regular-webfont.ttf
+../../../weather-icons/myfonts/weathericons-regular-webfont.woff
+../../../weather-icons/myfonts/weathericons-regular-webfont.woff2
+```  
+Save, and restart the node-red server to take effect.
+
+**Please note** Updating or re-installing the dashboard node will wipe out these changes, and they will need to be re-applied.
+
 ## Contributing
 If you feel so inclined to add icon ideas, icon art, or other fixes/changes to how the package works, feel free to help!
 
