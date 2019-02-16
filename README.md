@@ -1,4 +1,4 @@
-# Weather Icons
+# DO NOT USE - SEE [WEATHER-ICONS-LITE](https://github.com/Paul-Reed/weather-icons-lite) WHICH IS MERGED INTO NODE-RED CORE
 
 ## 222 Weather Themed Icons and CSS
 
